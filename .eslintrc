@@ -1,0 +1,69 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "assert": true
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "tabWidth": 2,
+        "semi": true,
+        "singleQuote": false,
+        "printWidth": 110,
+        "jsxBracketSameLine": true
+      }
+    ],
+    // NextJs specific fix: suppress errors for missing 'import React' in files for nextjs
+    "camelcase": "off",
+    "no-useless-return": "off",
+    "no-var": "warn",
+    "no-shadow": "off",
+    "no-console": "warn",
+    "no-lonely-if": "off",
+    "eqeqeq": ["warn", "always", { "null": "ignore" }],
+    "no-use-before-define": "off",
+    "no-nested-ternary": "warn",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/no-unused-vars": "warn", // "warn" for production
+    "@typescript-eslint/no-explicit-any": "warn", // "warn" for production
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-object-literal-type-assertion": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-return": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "@typescript-eslint/unbound-method": "off", // for React DND
+    "import/prefer-default-export": "off",
+    "no-trailing-spaces": "off",
+    "import/no-unresolved": "off",
+    "@typescript-eslint/no-empty-interface": "warn"
+  }
+}
