@@ -7,8 +7,19 @@
     "strict": false,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/config/*": ["config/*"],
+      "@/db/*": ["db/*"],
+      "@/handlers/*": ["handlers/*"],
+      "@/interfaces/*": ["interfaces/*"],
+      "@/middlewares/*": ["middlewares/*"],
+      "@/models/*": ["models/*"],
+      "@/routes/*": ["routes/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
   "exclude":[
     "./node_modules"
-  ]
+  ],
 }

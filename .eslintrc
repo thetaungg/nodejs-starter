@@ -20,13 +20,13 @@
     "SharedArrayBuffer": "readonly",
     "assert": true
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "simple-import-sort"],
   "rules": {
     "prettier/prettier": [
       "error",
       {
         "trailingComma": "es5",
-        "tabWidth": 2,
+        "tabWidth": 4,
         "semi": true,
         "singleQuote": false,
         "printWidth": 110,
@@ -61,9 +61,14 @@
     "@typescript-eslint/no-floating-promises": "warn",
     "@typescript-eslint/ban-ts-comment": "warn",
     "@typescript-eslint/unbound-method": "off", // for React DND
-    "import/prefer-default-export": "off",
     "no-trailing-spaces": "off",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/no-this-alias": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+
+    "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
-    "@typescript-eslint/no-empty-interface": "warn"
+    "simple-import-sort/imports": "error"
   }
 }
